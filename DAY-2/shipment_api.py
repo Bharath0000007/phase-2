@@ -40,6 +40,7 @@ def create_shipment(shipment_id: str, shipment: ShipmentIn):
         "status": compute_status(shipment.delay_days)
     }
 def compute_status(delay_days: int) -> str:
+    """Return shipment status based on the number of delay days."""
     if delay_days == 0:
         return "on_time"
     elif delay_days <= 2:
