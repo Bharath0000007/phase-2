@@ -12,7 +12,7 @@ def get_shipment(shipment_id: str):
     if shipment_id not in shipments_db:
         raise HTTPException(
             status_code=404,
-            detail="Shipment not found"
+            detail="Shipment not found"m
         )
 
     shipment = shipments_db[shipment_id]
