@@ -60,7 +60,8 @@ class Shipment:
         self.delay_days = delay_days
 
     def status(self) -> str:
-        return compute_status(self.delay_days)
+    """Return the current shipment status."""
+    return compute_status(self.delay_days)
 shipment = Shipment("S001", "FastFreight", 2)
 
 print(shipment.shipment_id)
